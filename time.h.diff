@@ -1,0 +1,29 @@
+diff -buNr time.h.org time.h
+--- time.h.org	2007-06-10 16:44:44.000000000 +0900
++++ time.h	2009-01-06 02:02:12.000000000 +0900
+@@ -160,9 +160,9 @@
+ #endif
+ 
+ #if __POSIX_VISIBLE >= 199309
+-int clock_getres(clockid_t, struct timespec *);
+-int clock_gettime(clockid_t, struct timespec *);
+-int clock_settime(clockid_t, const struct timespec *);
++/** @todo int clock_getres(clockid_t, struct timespec *); */
++/** @todo int clock_gettime(clockid_t, struct timespec *); */
++/** @todo int clock_settime(clockid_t, const struct timespec *); */
+ int nanosleep(const struct timespec *, struct timespec *);
+ #endif /* __POSIX_VISIBLE >= 199309 */
+ 
+@@ -183,9 +183,9 @@
+ /* bird: clash with EMX (and OGBSI6) timezone is a variable. man page say this
+  * is for Unix version 7 compatability though...
+ char *timezone(int, int); */
+-void tzsetwall(void);
+-time_t timelocal(struct tm * const);
+-time_t timegm(struct tm * const);
++/** @todo void tzsetwall(void); */
++/** @todo time_t timelocal(struct tm * const); */
++/** @todo time_t timegm(struct tm * const); */
+ #endif /* __BSD_VISIBLE */
+ 
+ /* bird: LIBC OGBSI6 compliance extras. */
